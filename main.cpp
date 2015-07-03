@@ -11,3 +11,4 @@ int main(int argc, char *argv[])
     QTest::qExec(new Test_MyList, argc, argv);
     return a.exec();
 }
+/barev
