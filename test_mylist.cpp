@@ -14,3 +14,17 @@ void Test_MyList::addLast()
        QCOMPARE(l.getItem(1), 2);
 }
 
+void Test_MyList::removeLast()
+{
+    MyList l;
+    l.addLast(1);
+    QCOMPARE(l.removeLast(), 1);
+}
+
+void Test_MyList::count()
+{
+    MyList l;
+    l.addLast(1);
+    QCOMPARE(l.count(), 1);
+}
+

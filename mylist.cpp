@@ -46,3 +46,34 @@ MyListData MyList::getItem(int index)
     else
         throw "index is out of bounds";
 }
+
+
+MyListData MyList::removeLast(){
+    if (first)
+        if (first->next==NULL) {
+            MyListData x = first->data;
+            delete first;
+            first=NULL;
+            return x;
+        } else {
+            ListNode* node = first;
+            while (node->next->next) node=node->next;
+            MyListData x =node->next->data;
+            delete node->next;
+            node->next=NULL;
+            return x;
+        }
+    return 0;
+}
+
+
+int MyList::count() {
+    int n=0;
+    ListNode* node = first;
+    while (node) {
+        ++n;
+        node = node->next;
+    }
+    return n;
+}
+
