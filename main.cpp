@@ -14,7 +14,6 @@ int main(int argc, char *argv[])
     resize_mylisth Test;
     QObject::connect (&l, SIGNAL(resize(int)),&Test, SLOT(resizeCatch(int)));
     l.addLast(3);
-    l.removeLast();
     return 0;
 }
 
