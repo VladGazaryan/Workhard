@@ -77,4 +77,7 @@ int MyList::count() {
     return n;
 }
 
+<<<<<<< HEAD
 //salam
+=======
+>>>>>>> dc0264e3e2d867280fb58309525b92062e1050f4
