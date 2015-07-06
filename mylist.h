@@ -14,6 +14,8 @@ struct ListNode
 class MyList : public QObject
 {
     Q_OBJECT
+signals:
+    void resize(int i);
 protected:
     ListNode *first;
 public:
@@ -24,13 +26,11 @@ public:
     void addLast(MyListData newData);
     MyListData removeLast();
     MyListData getItem(int index);
-
     int count();
 
 };
 
 #endif // MYLIST_H
-<<<<<<< HEAD
-//barev
-=======
->>>>>>> dc0264e3e2d867280fb58309525b92062e1050f4
+
+
+

@@ -17,8 +17,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp \
     mylist.cpp \
-    test_mylist.cpp
+    test_mylist.cpp \
+    resize_mylisth.cpp
 
 HEADERS += \
     mylist.h \
-    test_mylist.h
+    test_mylist.h \
+    resize_mylisth.h

@@ -27,6 +27,7 @@ void MyList::addLast(MyListData newData)
     } else {
         first = t;
     }
+    emit resize(count());
 }
 
 MyListData MyList::getItem(int index)
@@ -54,6 +55,7 @@ MyListData MyList::removeLast(){
             MyListData x = first->data;
             delete first;
             first=NULL;
+            emit resize(0);
             return x;
         } else {
             ListNode* node = first;
@@ -61,6 +63,7 @@ MyListData MyList::removeLast(){
             MyListData x =node->next->data;
             delete node->next;
             node->next=NULL;
+            emit resize(count());
             return x;
         }
     return 0;
@@ -77,7 +80,4 @@ int MyList::count() {
     return n;
 }
 
-<<<<<<< HEAD
-//salam
-=======
->>>>>>> dc0264e3e2d867280fb58309525b92062e1050f4
+
